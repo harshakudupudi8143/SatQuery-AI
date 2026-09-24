@@ -28,20 +28,20 @@ export function Navbar() {
           <Link to="/#features" className="text-sm font-medium text-textMuted hover:text-primary transition-colors">Features</Link>
           <Link to="/#how-it-works" className="text-sm font-medium text-textMuted hover:text-primary transition-colors">How it works</Link>
         </nav>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-2 sm:gap-4 items-center">
           {isAuthenticated ? (
             <>
-              <Button onClick={() => navigate('/progress')} variant="ghost">Progress</Button>
-              <Button onClick={() => navigate('/dashboard')} variant="ghost">Dashboard</Button>
+              <Button onClick={() => navigate('/progress')} variant="ghost" className="hidden sm:inline-flex">Progress</Button>
+              <Button onClick={() => navigate('/dashboard')} variant="ghost" className="hidden sm:inline-flex">Dashboard</Button>
               <Button onClick={() => navigate('/profile')} variant="ghost" size="icon" className="rounded-full bg-white/5 border border-white/10 hover:bg-white/10" title="Profile">
                 <UserCircle className="h-5 w-5 text-white" />
               </Button>
-              <Button onClick={handleLogout} variant="outline" size="sm">Logout</Button>
+              <Button onClick={handleLogout} variant="outline" size="sm" className="hidden sm:inline-flex">Logout</Button>
             </>
           ) : (
             <>
-              <Button onClick={() => navigate('/login')} variant="ghost">Log in</Button>
-              <Button onClick={() => navigate('/signup')}>Sign up</Button>
+              <Button onClick={() => navigate('/login')} variant="ghost" className="text-xs sm:text-sm px-2 sm:px-4">Log in</Button>
+              <Button onClick={() => navigate('/signup')} className="text-xs sm:text-sm px-3 sm:px-4">Sign up</Button>
             </>
           )}
         </div>

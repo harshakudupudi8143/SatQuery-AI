@@ -46,19 +46,19 @@ export default function Landing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-text">
+              <h1 className="text-4xl md:text-7xl font-bold mb-6 text-text">
                 Smart Education,<br/>
                 <span className="text-primary">Personalized for You</span>
               </h1>
-              <p className="text-xl text-textMuted mb-10 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-textMuted mb-10 max-w-2xl mx-auto">
                 An AI-powered learning platform that adapts to your child's pace, 
                 making education engaging, fun, and highly effective.
               </p>
-              <div className="flex justify-center gap-4">
-                <Button onClick={handleStart} size="lg" className="rounded-full">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button onClick={handleStart} size="lg" className="rounded-full w-full sm:w-auto">
                   Start Learning Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button onClick={handleSecondary} size="lg" variant="outline" className="rounded-full">
+                <Button onClick={handleSecondary} size="lg" variant="outline" className="rounded-full w-full sm:w-auto">
                   For Parents & Teachers
                 </Button>
               </div>

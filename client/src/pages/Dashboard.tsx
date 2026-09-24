@@ -57,7 +57,7 @@ export default function Dashboard() {
                 className="bg-primary/20 backdrop-blur-xl border border-white/30 rounded-[2rem] p-8 relative overflow-hidden shadow-[0_8px_32px_rgba(124,58,237,0.2)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
-                <div className="relative z-10 w-2/3">
+                <div className="relative z-10 w-full sm:w-2/3">
                   <span className="text-sm font-bold text-white tracking-wider uppercase mb-2 block opacity-80">Mathematics</span>
                   <h3 className="text-3xl font-bold font-heading mb-4 text-white drop-shadow-md">Fractions & Decimals</h3>
                   <p className="text-white/80 mb-6">Master the basics of dividing the whole into parts. Adaptive quiz included!</p>
@@ -80,11 +80,11 @@ export default function Dashboard() {
                   { id: 'coding', title: "Coding", icon: "💻", levels: ["HTML Basics", "JS Loops", "React"] },
                 ].map((subject, i) => (
                   <div key={i} className="p-6 rounded-[2rem] border border-white/10 bg-surface backdrop-blur-lg shadow-lg">
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
                       <div className="text-4xl">{subject.icon}</div>
-                      <h3 className="text-2xl font-bold text-white drop-shadow-md">{subject.title}</h3>
+                      <h3 className="text-2xl font-bold text-white drop-shadow-md text-center sm:text-left">{subject.title}</h3>
                     </div>
-                    <div className="flex items-center justify-between relative px-2 sm:px-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-between relative px-2 sm:px-8 gap-6 sm:gap-0">
                       {/* Connection Line */}
                       <div className="absolute top-7 left-8 right-8 h-2 bg-white/10 -translate-y-1/2 z-0 rounded-full" />
                       
@@ -142,7 +142,7 @@ export default function Dashboard() {
               <h2 className="text-xl font-bold mb-4 flex items-center gap-2 drop-shadow-sm">
                 <Trophy className="h-5 w-5 text-accent" /> Recent Badges
               </h2>
-              <div className="bg-surface backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-lg grid grid-cols-3 gap-4 text-center">
+              <div className="bg-surface backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-lg grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
                 {[
                   { name: "First Quiz", icon: "🎯" },
                   { name: "3-Day Streak", icon: "🔥" },
