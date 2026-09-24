@@ -21,6 +21,16 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'SatQuery AI Server is running!' });
 });
 
+// Serve frontend static files in production
+const path = require('path');
+const clientBuildPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientBuildPath));
+
+// Catch-all route to serve the React app for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
