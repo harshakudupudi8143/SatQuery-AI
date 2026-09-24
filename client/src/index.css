@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0B1A;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  
+  --color-primary: #7C3AED;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-secondary: #06B6D4;
+  --color-secondary-foreground: #FFFFFF;
+  
+  --color-accent: #EC4899;
+  --color-accent-foreground: #FFFFFF;
+  
+  --color-danger: #EF4444;
+  --color-danger-foreground: #FFFFFF;
+  
+  --color-muted: rgba(255, 255, 255, 0.1);
+  --color-muted-foreground: rgba(255, 255, 255, 0.6);
+  
+  --color-text: #F8FAFC;
+  --color-textMuted: #CBD5E1;
+
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+    background-attachment: fixed;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+}
+
+/* Google Translate Customization */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.goog-te-gadget-simple span {
+  color: white !important;
+}
+.goog-te-menu-value span {
+  color: white !important;
+}
+.goog-te-menu-value span:nth-child(5) {
+  color: white !important;
+}
+.goog-te-gadget-icon {
+  display: none !important;
+}
+body {
+  top: 0px !important; 
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+
+/* ENHANCED Google Translate Customization for Liquid Glass Theme */
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 6px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.goog-te-gadget-simple:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4) !important;
+}
+
+.goog-te-gadget-simple span {
+  color: white !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+}
+
+.goog-te-gadget-icon {
+  display: none !important; /* Hide google icon */
+}
+
+/* Hide the powered by google logo */
+.goog-logo-link {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+/* Hide the top banner that pushes body down */
+.skiptranslate iframe {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
+}
+
+/* Make sure the text value itself is perfectly white */
+.goog-te-menu-value {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+.goog-te-menu-value span:nth-child(5) {
+  color: rgba(255, 255, 255, 0.5) !important;
+  margin-left: 4px !important;
+}
+.goog-te-menu-value span:nth-child(3) {
+  border-left: none !important;
+}
